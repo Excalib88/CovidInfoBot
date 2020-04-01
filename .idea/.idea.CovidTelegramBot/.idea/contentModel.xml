@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\projects\CovidTelegramBot" t="IncludeFlat">
+      <e p="CovidTelegramBot" t="IncludeRecursive">
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CovidInfo.cs" t="Include" />
+        <e p="CovidRegion.cs" t="Include" />
+        <e p="CovidService.cs" t="Include" />
+        <e p="CovidTelegramBot.csproj" t="IncludeRecursive" />
+        <e p="NormalizerExtensions.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="CovidTelegramBot.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="CovidTelegramBot.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\rave9\.Rider2019.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\rave9\.Rider2019.3\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\rave9\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\rave9\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_CovidTelegramBot.1798927219.00" t="ExcludeRecursive" />
+  </component>
+</project>
