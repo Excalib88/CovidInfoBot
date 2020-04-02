@@ -40,28 +40,36 @@ namespace CovidTelegramBot
         {
             var chat = e.Update.Message.Chat;
             var message = e.Update.Message;
-
-            if (message.Text.Contains("region"))
-            {
-                var covidService = new CovidService();
-                var models = await covidService.GetRegion();
-
-                var sb = new StringBuilder();
-                
-                foreach (var model in models)
-                {
-                    sb.Append(model);                
-                }
-                
-                await _bot.SendTextMessageAsync(chat.Id, sb.ToString());
-            }
             
-            if (message.Text.Contains("info"))
-            {
-                var covidService = new CovidService();
-                var model = await covidService.GetInfo();
+            if(chat == null || message == null || string.IsNullOrEmpty(message.Text)) return;
 
-                await _bot.SendTextMessageAsync(chat.Id, model.ToString());
+            switch (message.Text)
+            {
+                case var text when text.Contains("region"):
+                {
+                    var covidService = new CovidService();
+                    var models = await covidService.GetRegion();
+
+                    var sb = new StringBuilder();
+                
+                    foreach (var model in models)
+                    {
+                        sb.Append(model);                
+                    }
+                
+                    await _bot.SendTextMessageAsync(chat.Id, sb.ToString());
+                    
+                    break;
+                }
+                case var text when text.Contains("info"):
+                {
+                    var covidService = new CovidService();
+                    var model = await covidService.GetInfo();
+
+                    await _bot.SendTextMessageAsync(chat.Id, model.ToString());
+                    
+                    break;
+                }
             }
         }
     }
