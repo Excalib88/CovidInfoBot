@@ -22,9 +22,9 @@ namespace CovidTelegramBot
                 .AddJsonFile("appsettings.json", true, true)
                 .Build();
 
-            var socks = new HttpToSocks5Proxy("185.233.82.111", 9694, "6L4E69", "aJcf5a");
+            var socks = new HttpToSocks5Proxy("host", 9694, "username", "password");
             
-            _bot = new TelegramBotClient("1212762438:AAFUFtjX85bpnIGY6Cvc1LzpuUp03gDLJ6Q", socks);
+            _bot = new TelegramBotClient("token", socks);
             StartBot();
             
             Thread.Sleep(Timeout.Infinite);
